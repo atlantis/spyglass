@@ -10,7 +10,7 @@ module Spyglass
     end
 
     getter image : LibSod::SodImg
-    getter data : Tensor(Float32)
+    getter data : Tensor(Float32, CPU(Float32))
     getter path : String
 
     private def initialize(@image, @data, @path)
@@ -516,7 +516,7 @@ module Spyglass
       Image.new(img)
     end
 
-    # Creates a `Bottle::Tensor` from the image data.
+    # Creates a `Tensor` from the image data.
     private def self.create_tensor(img : LibSod::SodImg)
       shape = [img.h, img.w, img.c]
       strides = [0] * shape.size
@@ -528,7 +528,7 @@ module Spyglass
       end
 
       flags = Num::ArrayFlags::Contiguous
-      Tensor.new(img.data, shape, strides, flags, nil)
+      Tensor.new(img.data, shape, strides, flags: flags)
     end
 
     private def ensure_unit_interval(value : Float64)
