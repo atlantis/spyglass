@@ -2,7 +2,7 @@
 
 A simple wrapper around SOD - An Embedded Computer Vision & Machine Learning Library, that provides
 access to powerful low-level image manipulation routines, as well as high level interaction with
-images using N-Dimensional Tensors from Bottle.
+images using N-Dimensional Tensors from Num.cr.
 
 ## Installation
 

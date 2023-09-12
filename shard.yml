@@ -5,8 +5,8 @@ description: |
   Crystal bindings to the Sod ML and Computer Vision library
 
 dependencies:
-  bottle:
-    github: crystal-data/bottle
+  num:
+    github: crystal-data/num.cr
     branch: master
 
 authors:

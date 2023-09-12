@@ -1,4 +1,4 @@
-require "bottle"
+require "num"
 require "./lib/sod"
 require "./spyglass/box"
 require "./spyglass/points"
